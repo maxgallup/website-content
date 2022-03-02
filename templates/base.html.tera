@@ -48,7 +48,8 @@
 
   <footer>
         <div>
-            <span><i>No cookies no bullshit</i> 🤮🍪 </span>
+            <span><i>no cookies no bullshit</i> </span>
+            <span><i>powered by <a href="https://rocket.rs" target="_blank">Rocket.rs</a> 🦀</i> </span>
         </div>
     </footer>
 
