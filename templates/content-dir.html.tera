@@ -2,8 +2,8 @@
 
 {% block content %}
 
+<div class="card">
     <h1>{{ title }}</h1>
-
 
     <table>
     {% for i in items %}
@@ -16,5 +16,6 @@
     {% endfor %}
 
     </table>
+</div>
 
 {% endblock content %}

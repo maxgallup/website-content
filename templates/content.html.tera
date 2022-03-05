@@ -2,6 +2,8 @@
 
 {% block content %}
 
+<div class="card">
     {{ content | safe }}
+</div>
 
 {% endblock content %}

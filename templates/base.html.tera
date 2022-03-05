@@ -34,9 +34,7 @@
 
 
     <main>
-      <div class="card">
         {% block content %}{% endblock content %}
-      </div>
     </main>
 
 
