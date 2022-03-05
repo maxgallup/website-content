@@ -1,0 +1,26 @@
+{% extends "base" %}
+
+{% block content %}
+
+<div class="card">
+    {{ intro | safe }}
+</div>
+
+{% for card in cards %}
+<div class="card">
+    <h1>{{ card.title }}</h1>
+
+    <table>
+    {% for i in card.items %}
+        <tr>
+                <td><a href="{{ card.title }}/{{ i.link }}">{{ i.title }}</a></td>
+                <td id="table-date">{{ i.date }}</td>
+            
+        </tr>
+    {% endfor %}
+
+    </table>
+</div>
+{% endfor %}
+
+{% endblock content %}
