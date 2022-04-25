@@ -1,7 +1,5 @@
 # Homelab Self Hosting Setup
 
-  
-
 Do you also have an old PC or laptop lying around collecting dust? The main idea behind self-hosting is to setup hardware on your home network and connect it to the outside world to do useful things like:
 * Store Files in the cloud like google drive
 * Create cloud backups 
@@ -20,5 +18,19 @@ This post will showcase some of the previously mentioned points, however I great
   
 
 ### Nextcloud
-A feature rich suite of services offered by Nextcloud allow you to fully replace google drive and dropbox. Nextcloud can be hosted on variety of platforms from Raspberry Pi to a fully dedicated home server. Installation can be ["dockerized"](https://docs.nextcloud.com/server/latest/admin_manual/installation/source_installation.html)or just [installed natively](https://nextcloud.com/release-channels/) on a linux machine. Certain requirements must be met for native installation, so it's thus advised to follow an in-depth tutorial like the ones from [ApfelCast](https://www.youtube.com/watch?v=QB_FEWJ9BB4). 
+A feature rich suite of services offered by Nextcloud allow you to fully replace google drive and dropbox. Nextcloud can be hosted on variety of platforms from Raspberry Pi to a fully dedicated home server. Installation can be ["dockerized"](https://docs.nextcloud.com/server/latest/admin_manual/installation/source_installation.html)or just [installed natively](https://nextcloud.com/release-channels/) on a linux machine. Certain requirements must be met for native installation, so it's thus advised to follow an in-depth tutorial like the ones from [ApfelCast](https://www.youtube.com/watch?v=QB_FEWJ9BB4).
+
+### FileBrowser
+
+### PhotoPrism
+
+### Gitea
+
+### Your own website!
+
+### Nginx Proxy Manager
+
+### Portainer
+
+### Pihole
 
