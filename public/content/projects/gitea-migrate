@@ -1,0 +1,42 @@
+# gitea-migrate
+
+This very simple program makes it easier to ensure that your Github repositories are migrated at a given Gitea instance. This can be done trivially with a [shell script](https://dev.to/nicolasboyer/imigrate-all-of-your-repos-from-github-to-gitea-3fk), however I thought it would be a nice first proper Rust project and it would be useful to have more options. Finally, it's improtant that this can run idempotently on a server perhaps as a cron job.
+
+# Features
+Specify exactly which repositories should be mirrored or migrated with the following flags:
+* `--public` - (default) only mirror all public repositories under your username
+* `--private` - only mirror all private repositories under your username
+* `--both` - only mirror all private and public repositories under your username
+* `--all` - mirror all private and public repositories including ones from other users that you are associated with
+* `--no-mirror` - will only clone the repositories (not as mirrors)
+
+# Usage
+You must specify a destination URL to the target Gitea instance as a cli argument.
+Since migrating repositories requires user authorization, you will be prompted to enter your github 
+username and access [token](https://github.com/settings/tokens). Additionally, you will be required 
+enter the username and password for your target Gitea instance. However, if you don't wish to manually
+enter credentials every time, you can simply enter your credentials in a file and specifiy with the 
+`--creds` flag the name of the file.
+
+`credentials.txt`
+``` txt
+github_username:github_access_token
+gitea_username:gitea_password
+```
+**IMPORTANT** Be sure to follow the above layout exactly, otherwise your credentials won't be parsed correctly. (if you feel like there is a better way to store credentials open a [pull request](https://github.com/maxgallup/gitea-migrate/pulls)! )
+
+### Examples
+```
+gitea-migrate --dest https://gitea.example.com --both
+```
+This will **mirror** all private and public repos under the github username that was manually entered.
+
+```
+gitea-migrate --dest https://gitea.example.com --all --no-mirror --creds ~/credentials.txt 
+```
+This will **migrate** (and not mirror) all private and public repos associated with the user specified in the `credentials.txt` file. 
+
+### Install
+```
+cargo install gitea-migrate
+```
