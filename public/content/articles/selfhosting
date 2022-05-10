@@ -1,0 +1,50 @@
+# What is self hosting?
+
+Free and convinient services like Google Drive, iCloud and Gmail come with an important draw back that many people tend to overlook. Any personal documents, fotos or data that you store on these free services is not actually **yours**. While it seems like you might be able to access and do with your files as you please, the moment Google or whoever is hosting this service for you decides otherwise, there is simply nothing you can do. While there are laws that greatly disencourage hosting providers to mettle with your data, you will only be able to take the *word* of tech giants to actually do as they say they do. Since none of the source code used to run the services is [Open Source,](https://opensource.org/osd) there is no way that law makers or the general public can provably verify what happens with your data once you hand it over.
+
+Taking these services into one's own hands (literally) is one of the main motivations (for me) behind self hosting. Self hosting means that you own a computer(s) that in your home and run software similar to the previously mentioned services that benefit yourself directly. The clear advantage here is that you own the physical components that host your data. You also have complete control over what happens to it. By running Open Source software that others have made you can choose from a pleathora of services that you would like to run and benefit from.
+
+# Advantages of Self Hosting
+* You own your data and you have full control over what happens to it and who has access to it. If it is invaluable to you that you keep your sensitive physical items strictly under your control (ID, passport, credit card...), then it is likely also invaluable that you keep your data strictly under your control.
+* You can run almost anything yourself from the Open Source community see [r/selfhosted](https://www.reddit.com/r/selfhosted/) for what is possible.
+* You are not limited to what companies provide. If 15GB of cloud storage is not enough (which it isn't) you can very cheaply upgrade your own hardware to fit your needs. The cost of a simple home server can easily be under 100EUR offering much more storage capacity than any paid service could even come close to.
+
+
+Do you also have an old PC or laptop lying around collecting dust? The main idea behind self-hosting is to setup hardware on your home network and connect it to the outside world to do useful things like:
+* Store Files in the cloud like google drive
+* Create cloud backups 
+* Create a VPN to your home network
+* Setup Docker/Portainer for management
+* Host a simple website
+* Host a VScode editor in the browser
+* Create a test/sandbox environment for coding projects
+* Automate scripts and tasks
+* Network-wide add blocker
+
+  
+
+This post will showcase some of the previously mentioned points, however I greatly encourage you to think of some part of your digital life that can be self hosted.
+
+  
+
+### DropBox and more replacement: Nextcloud
+A feature rich suite of services offered allow you to fully replace google drive and dropbox. Nextcloud can be hosted on variety of platforms from Raspberry Pi to a fully dedicated home server. Installation can be ["dockerized"](https://docs.nextcloud.com/server/latest/admin_manual/installation/source_installation.html)or just [installed natively](https://nextcloud.com/release-channels/) on a linux machine. Certain requirements must be met for native installation, so it's thus advised to follow an in-depth tutorial like the ones from [ApfelCast](https://www.youtube.com/watch?v=QB_FEWJ9BB4). Among it's many features, most useful are the calendar and contact sync applications that can easily be added through the Web-UI. This allows you to sync calendar and contacts to any device, while being in full control of all personal data.
+
+  
+
+### Access your files from anywhere with FileBrowser
+[FileBrowser](https://filebrowser.org/) is an incredibly powerful and lightweight solution for viewing, downloading and even sharing files. It's extremly responsive and stable making it a good alternative to Nextcloud if all you are after is the drive functionality.
+
+### Google Photos alternative: PhotoPrism
+[PhotoPrism](https://photoprism.app/) is a feature rich Web UI for viewing and organizing photos or videos. If you have a [NAS](https://en.wikipedia.org/wiki/Network-attached_storage) you can use PhotoPrism to view your media library.
+
+### Self host git projects with Gitea
+
+### Your own website!
+
+### Nginx Proxy Manager
+
+### Portainer
+
+### Pihole
+
