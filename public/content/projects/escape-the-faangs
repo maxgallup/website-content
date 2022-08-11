@@ -1,6 +1,6 @@
-# Lessons learned from making a 2D Game made in Rust and Bevy
+# Lessons learned from making a 2D Game with Rust and Bevy
 
-Play it here: [Escape the FAANGS](maxgallup.github.io/escape)
+Play it here: [Escape the FAANGS](https://maxgallup.github.io/escape)
 
 On my journey of learning rust I decided to recreate a University assignment using Rust and the [Bevy game engine](bevyengine.org). Bevy uses an extremely well documented Entity Component System  which took some time to understand at first, but after messing around with some examples. It was very easy to start making my own game.
 
