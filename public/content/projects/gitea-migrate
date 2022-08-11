@@ -1,4 +1,4 @@
-# gitea-migrate
+# Migrate or Mirror Github repositories to Gitea
 
 This very simple program makes it easier to ensure that your Github repositories are migrated at a given Gitea instance. This can be done trivially with a [shell script](https://dev.to/nicolasboyer/imigrate-all-of-your-repos-from-github-to-gitea-3fk), however I thought it would be a nice first proper Rust project and it would be useful to have more options. Finally, it's improtant that this can run idempotently on a server perhaps as a cron job.
 

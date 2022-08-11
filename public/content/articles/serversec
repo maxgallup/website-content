@@ -121,3 +121,4 @@ netstat -tunlp
 
 ## Cloudflare Proxy
 
+Using cloudflare's reverse proxy greatly increases your security, because you no longer have to expose your own IP address to the internet. After siging up with their service (free account available) you can migrate your domain names to cloudflare and start using their proxies.

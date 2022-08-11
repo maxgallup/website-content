@@ -1,0 +1,6 @@
+# Gnome Extension for Tailscale management
+
+After discovering tailscale I immediately saw the benefit of being able to reach any machine in the network by simply installing tailscale on it. However, I kept on having to rely on the command line to find basic information like the IP address of my nodes with `tailscale status`. Thus it seemed like a good idea to make a Gnome Extension that gives me a basic overview of my nodes and perhaps with some additional functionality.
+
+### Gnome Extension Development
+I quickly found that there was some missing documentation for making a very basic gnome extension. [This tutorial](https://www.codeproject.com/Articles/5271677/How-to-Create-A-GNOME-Extension) helped a lot, however reading the [gnome-shell source code](https://github.com/GNOME/gnome-shell/blob/main/js/ui/popupMenu.js) was much more helpful.
