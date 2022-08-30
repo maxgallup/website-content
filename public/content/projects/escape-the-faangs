@@ -2,9 +2,27 @@
 
 Play it here: [Escape the FAANGS](https://maxgallup.github.io/escape)
 
-On my journey of learning rust I decided to recreate a University assignment using Rust and the [Bevy game engine](bevyengine.org). Bevy uses an extremely well documented Entity Component System  which took some time to understand at first, but after messing around with some examples. It was very easy to start making my own game.
+On my journey of learning rust I decided to recreate a University assignment using Rust and the [Bevy game engine](bevyengine.org).
+Bevy uses an extremely well documented Entity Component System  which took some time to understand at first, but after messing around with some examples.
+It was very easy to start making my own game.
+
+  
+### lesson 1
+Initially I wanted to use SVG files for the character (for no good reason), but this ended up complicating things because I had to use an 3rd party plugin, since Bevy doesn't support SVG files natively.
+Since this plugin had its own issues I spent a lot of time trying to debug something until I noticed I could easily use PNG files for the character instead and went with that.
+Before you go down a deep rabbit hole because you think it's the best way, take a step back and at least try the other options you initially dismissed.
+In hindsight, the correct way would've actually been to try and fix the issue with the thrid party plugin itself and contribute back, however I already saw [issues](https://github.com/Weasy666/bevy_svg/issues/11) opened so I decided to leave it be.
 
   
 
-Initially I wanted to use SVG files for the character (for no good reason), but this ended up complicating things because I had to use an 3rd party plugin, since Bevy doesn't support SVG files natively. Since this plugin had its own issues I spent a lot of time trying to debug something until I noticed I could easily use PNG files for the character instead and went with that. **Lesson number 1** before you go down a deep rabbit hole because you think it's the best way, take a step back and at least try the other options you initially dismissed. 
+### Lesson 2
+The main goal of this project was to be able to play the game in the browser - including mobile browsers.
+So at the beginning of the project I had a basic hello world working in the browser.
+However, when actually writing the game I developed on my own computer since it required less time to compile and I would have to constantly update the wasm and js files for the browser.
+That's exactly where I made a mistake, I waited until the very end to see if it worked on the browser - of course it didn\'t.
+After some time debugging I got it working and was excited to release it.
+After having released it and finishing the project mentally, I finally tried it on my phone and performance was horrible!
+Somehow, I had expected performance to be just as good on the mobile browser, so I didn't bother testing it out.
+Lesson learned, test as much as possible on the target platform, even if that means it will take more time!
+
 
