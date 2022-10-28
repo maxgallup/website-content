@@ -1,10 +1,11 @@
 # Securing a Linux Server
 
-The following are extremely important tasks that an administrator should do when starting a freshly installed unix based server.  
+After coming across [this video by LiveOverflow](https://www.youtube.com/watch?v=fKuqYQdqRIs) it became clear that a server won't be secure just because you blindly follow some steps found somewhere on the internet like on this blog. It's much more important to actually understand the details behind why some of the steps mentioned below may or may not be important for security. One can have a false sense of security by just blindly following steps without actually knowing what exactly they do or how they help, because the security measures that one takes for a server largely depend on what that server is being used for.. 
+
 
   
 
-## 1. Updates
+### 1. Updates
 First, make sure the packages on your server are updated and that they will update automatically. This example is based on Ubuntu based install which uses `apt` as its package manager, however it can be applied to any other. With the first command, we will be updating and upgrading in one command with the help of `&&` which execute the command following it if the first command has executed successfully. 
 
 ``` sh
@@ -18,9 +19,10 @@ crontab -e
 0 */12 * * * apt update && apt upgrade -y
 ```
 
+[Unattended upgrades](https://www.linuxcapable.com/how-to-setup-configure-unattended-upgrades-on-ubuntu-20-04/) are also an option.
   
 
-## 2. UFW (Uncomplicated Firewall)
+### 2. UFW (Uncomplicated Firewall)
 The second most important task is to secure your server with a simple firewall which will only allow connections through specific, user defined ports. **IMPORTANT:** if you are connected to your server via ssh follow the steps in **exactly** the right order, otherwise you will risk not being able to access your server. First, allow the port `22` since this is for `ssh` and then enable the firewall. If your application uses ports like 80 or 443 for serving websites you will have to allow those as well. The `ufw status` command returns a list of open ports and tells us if the firewall is active or not.
 
 ```sh
@@ -29,12 +31,12 @@ sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw enable
 sudo ufw reload
-sufo ufw status
+sudo ufw status
 ```
 
   
 
-## 3. Create non-root user
+### 3. Create non-root user
 ``` sh
 adduser name
 
@@ -45,7 +47,7 @@ exit
 
   
 
-## 4. SSH Keypairs
+### 4. SSH Keypairs
 If you don't already have an `id_rsa.pub` file located in `~/.ssh/` you must generate an ssh public key on your local computer, the on you use to access the server. When prompted to add a password, I would recommend to leave this empty. After running the first command below, a public key will be stored in the `.ssh/` directory. This key needs to be copied to the server and its contents will be appended to the `authorized_keys` file, located in `.ssh/` on the server.
 ``` sh
 --- ON YOUR LOCAL COMPUTER ---
@@ -71,7 +73,7 @@ sudo service ssh restart OR systemctl restart sshd
 
   
 
-## 5. sysctl.conf
+### 5. sysctl.conf
 
 Open the `sysctl.conf` file and search for the following sections and uncomment the associated lines. 
 * two lines to enable Spoof protection (reverse-path filter)
@@ -87,7 +89,7 @@ sysctl -p
 
   
 
-## 6. host.conf
+### 6. host.conf
 
 Open the `host.conf` file and change the following
 ``` sh
@@ -98,7 +100,7 @@ nospoof on
 
   
 
-## 7. fail2ban
+### 7. fail2ban
 ``` sh
 sudo apt install fail2ban
 sudo systemctl enable fail2ban
@@ -108,7 +110,7 @@ sudo systemctl status fail2ban
 
   
 
-## Optional Extras 
+### Optional Extras 
 
 ``` sh
 uptime
@@ -119,6 +121,6 @@ netstat -tunlp
 
   
 
-## Cloudflare Proxy
+### Cloudflare Proxy
 
-Using cloudflare's reverse proxy greatly increases your security, because you no longer have to expose your own IP address to the internet. After siging up with their service (free account available) you can migrate your domain names to cloudflare and start using their proxies.
+Using cloudflare's reverse proxy greatly increases your security, because you no longer have to expose your own IP address to the internet. After signing up with their service (free account available) you can migrate your domain names to cloudflare and start using their proxies.
