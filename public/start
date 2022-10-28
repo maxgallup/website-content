@@ -1,18 +1,15 @@
 # Max Gallup
-I'm a computer science student interested in free and open source software, blockchain, WebAssembly, the Rust programming language, machine learning and operating systems.
-I would love to contribute to [projects](https://www.futo.org/about/what-does-futo-believe) that push back against the user data driven business model that too many big tech companies thrive off of.
-Additionally, eliminating security vulnerabilities through safer programming and increasing efforts to reduce the carbon footprint of computers is what I would like to work towards.
-This website aims to serve as a collection of personal projects, posts and food recipes.
+I'm a computer science student interested in free and open source software, the Rust programming language, WebAssembly,  blockchains, machine learning and operating systems. I would love to learn more about how to prevent security vulnerabilities and bugs before the program compiles, hence the interest in the Rust programming language. In addition to that I would love to contribute to [projects](https://www.futo.org/about/what-does-futo-believe) that push back against the exploitative user data driven business model that too many big tech companies thrive off of nowadays. Additionally, I am very fascinated by rethinking the way computers work from the ground up. Particularly, to try to approach an architecture more similar to the human brain with Neuromorphic Computing. This website serves as a collection of personal projects, random posts, food recipes and my [CV](/cv).
 
   
 
-### Software Experience - [CV](/cv)
-* C/C++, Python, Shell Scripting, Javascript, Rust, Java, Scala
-* Proxmox, Docker, Ansible, Nginx
+### Software Experience
+* Rust, C/C++, Python, Shell Scripting, Javascript, Java, Scala, Haskell
+* Proxmox, Docker, Ansible, Nginx, Cloudflare Proxy + DNS, Tailscale
 * Arduino, ESP8266, Raspberry Pi
 * General knowledge about Linux Desktop & Server
 * Backup technologies and RAID
-* Self hosting: Nextcloud, Pihole, Nginx Proxy Manager, Photoprism, WireGuard VPN, Personal Blog
+* Self hosting: Nextcloud, Pihole, Nginx Proxy Manager, Photoprism, WireGuard VPN, Gitea, Proxies, Personal Blog
 
   
 
