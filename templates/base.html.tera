@@ -23,10 +23,10 @@
     <nav id="nav">
         <ul id="navlist" class="navitem">
             <li class="navitem" ><a href="/" id="home">home</a></li>
-            <li class="navitem"><a href="/cv" target="_blank">my CV</a></li>
+            <li class="navitem"><a href="/cv" target="_blank">cv</a></li>
+            <li class="navitem"><a href="/now">now</a></li>
+            <li class="navitem" ><a href="/blog" id="blog">blog</a></li>
             <li class="navitem" ><a href="/recipes" id="recipes">recipes</a></li>
-            <li class="navitem" ><a href="/articles" id="articles">articles</a></li>
-            <li class="navitem" ><a href="/projects" id="projects">projects</a></li>
             <li class="navitem" ><a href="/isitvegan" id="isitvegan">plants?</a></li>
             <li class="navitem"><a href="https://github.com/maxgallup/" target="_blank">github</a></li>
             <li class="navitem"><a href="https://linkedin.com/in/maxgallup" target="_blank">linkedin</a></li>
@@ -37,11 +37,6 @@
     <main>
         {% block content %}{% endblock content %}
     </main>
-
-
-
-
-
 
   </body>
 
